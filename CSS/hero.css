@@ -1,0 +1,45 @@
+/* CSS/hero.css */
+
+.hero{
+  position: relative;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+}
+
+.hero-inner{
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-subtitle{
+  margin-bottom: 24px;
+
+  font-size: 14px;
+  color: #86868B;
+  letter-spacing: 0.12em;
+}
+
+.hero-title{
+  font-size: clamp(56px,10vw,140px);
+  line-height: 0.95;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+}
+
+.hero-gradient{
+  position: absolute;
+  right: -200px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 600px;
+  height: 600px;
+
+  background: radial-gradient(circle,
+  rgba(255,255,255,0.08) 0%,
+  rgba(255,255,255,0) 70%);
+}

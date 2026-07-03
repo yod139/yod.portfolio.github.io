@@ -1,0 +1,278 @@
+/* CSS/showcase.css */
+
+.showcase{
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.showcase-item{
+  margin-bottom: 240px;
+}
+
+.showcase-content{
+  margin-bottom: 40px;
+}
+
+.showcase-number{
+  margin-bottom: 16px;
+
+  color: #86868B;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+
+.showcase-title{
+  margin-bottom: 16px;
+
+  font-size: clamp(40px,6vw,72px);
+  font-weight: 600;
+}
+
+.showcase-text{
+  color: #86868B;
+  font-size: 18px;
+}
+
+.showcase-image{
+  position: relative;
+
+  width: 100%;
+  height: 90vh;
+
+  overflow: hidden;
+  border-radius: 32px;
+}
+
+.showcase-image img{
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* =========================
+MINI WORKS HEADER
+========================= */
+
+.mini-works-header{
+  margin-top: 120px;
+  margin-bottom: 48px;
+}
+
+.mini-works-subtitle{
+  margin-bottom: 12px;
+
+  font-size: 14px;
+  letter-spacing: 0.12em;
+
+  color: #86868B;
+}
+
+.mini-works-title{
+  font-size: clamp(40px,5vw,72px);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+/* =========================
+MINI WORKS
+========================= */
+
+.mini-works{
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  margin-top: 0px;
+}
+
+.mini-work{
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+  border-radius: 28px;
+
+  background: #111;
+
+  border: 1px solid rgba(255,255,255,0.05);
+
+  transition:
+  transform 0.8s cubic-bezier(0.22,1,0.36,1),
+  border-color 0.8s cubic-bezier(0.22,1,0.36,1),
+  box-shadow 0.8s cubic-bezier(0.22,1,0.36,1);
+}
+
+.mini-work img{
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.8s cubic-bezier(0.22,1,0.36,1);
+}
+
+.mini-work:hover{
+  transform:
+  translateY(-8px)
+  scale(1.01);
+
+  border-color: rgba(255,255,255,0.14);
+
+  box-shadow:
+  0 20px 60px rgba(0,0,0,0.35);
+}
+
+.mini-work:hover img{
+  transform: scale(1.05);
+}
+
+/* =========================
+   PROJECT SITES
+========================= */
+
+.project-sites{
+    display:flex;
+    flex-direction:column;
+    gap:80px;
+    margin-top:60px;
+}
+
+.project-site{
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+}
+
+.project-image{
+    overflow:hidden;
+    border-radius:12px;
+}
+
+.project-image img{
+    width:100%;
+    display:block;
+    transition:.6s;
+}
+
+.project-image:hover img{
+    transform:scale(1.03);
+}
+
+.project-info{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.project-info h3{
+    font-size:18px;
+    font-weight:500;
+    letter-spacing:.05em;
+}
+
+.login-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:16px;
+}
+
+.login-row:last-child{
+    margin-bottom:0;
+}
+
+.copy-btn{
+    width:90px;
+    height:36px;
+
+    border:1px solid #fff;
+    background:none;
+
+    color:#fff;
+
+    font-size:11px;
+    letter-spacing:.15em;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.copy-btn:hover{
+    background:#fff;
+    color:#000;
+}
+
+.project-button{
+    width:180px;
+    height:52px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid #fff;
+
+    text-decoration:none;
+
+    font-size:12px;
+    letter-spacing:.2em;
+
+    transition:.3s;
+}
+
+.project-button:hover{
+    background:#fff;
+    color:#000;
+}
+
+.login-toggle{
+    width:180px;
+    height:52px;
+
+    background:none;
+    border:1px solid #fff;
+
+    color:#fff; /* ←追加 */
+
+    cursor:pointer;
+
+    font-size:12px;
+    letter-spacing:.2em;
+
+    transition:.3s;
+}
+
+.login-toggle:hover{
+    background:#fff;
+    color:#000;
+}
+
+.login-toggle:hover{
+    background:#fff;
+    color:#000;
+}
+
+.login-info{
+    display:none;
+
+    padding:20px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    line-height:2;
+}
+
+.login-info.active{
+    display:block;
+}

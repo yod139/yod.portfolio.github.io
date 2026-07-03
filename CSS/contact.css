@@ -1,0 +1,38 @@
+/* CSS/contact.css */
+
+.contact-inner{
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-title{
+  margin-bottom: 60px;
+
+  font-size: clamp(48px,7vw,100px);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.contact-button{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 240px;
+  height: 64px;
+
+  border-radius: 999px;
+
+  background: #F5F5F7;
+  color: #0B0B0B;
+
+  font-size: 14px;
+  letter-spacing: 0.08em;
+
+  transition: 0.3s;
+}
+
+.contact-button:hover{
+  transform: translateY(-4px);
+}
