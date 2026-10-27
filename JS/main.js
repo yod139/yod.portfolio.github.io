@@ -193,4 +193,53 @@ gsap.from(".profile-heading",{
     start:"top 75%",
     toggleActions:"play reverse play reverse"
   }
-});b
+});
+
+/* =========================
+   PROJECT 03：サンプルサイト切り替え
+========================= */
+
+document.querySelectorAll(".sample-tab").forEach(tab => {
+
+  tab.addEventListener("click", () => {
+
+    document.querySelectorAll(".sample-tab").forEach(t => {
+      const active = (t === tab);
+      t.classList.toggle("is-active", active);
+      t.setAttribute("aria-selected", active ? "true" : "false");
+    });
+
+    document.querySelectorAll(".sample-panel").forEach(panel => {
+      const active = (panel.id === tab.dataset.target);
+      panel.classList.toggle("is-active", active);
+      panel.hidden = !active;
+    });
+
+    // 表示が切り替わったので、アニメーション位置を再計算
+    if (window.ScrollTrigger) ScrollTrigger.refresh();
+
+  });
+
+});
+
+/* =========================
+   PROJECT 03：PC / SP 表示切り替え
+========================= */
+
+document.querySelectorAll(".sample-panel").forEach(panel => {
+
+  const buttons = panel.querySelectorAll(".device-btn");
+
+  buttons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+      buttons.forEach(b => b.classList.toggle("is-active", b === button));
+
+      panel.classList.toggle("is-sp", button.dataset.device === "sp");
+
+    });
+
+  });
+
+});
