@@ -276,3 +276,226 @@ MINI WORKS
 .login-info.active{
     display:block;
 }
+
+
+/* =========================
+   PROJECT 03：サンプルサイト（埋め込みプレビュー）
+========================= */
+
+.sample-lead{
+  margin-top:24px;
+  color:#A1A1A6;
+  font-size:15px;
+  line-height:1.9;
+}
+
+/* タブ */
+.sample-tabs{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+  margin-bottom:32px;
+}
+
+.sample-tab{
+  display:flex;
+  align-items:center;
+  gap:16px;
+
+  padding:22px 28px;
+
+  background:none;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:16px;
+
+  color:#86868B;
+  font-family:inherit;
+  font-size:18px;
+  text-align:left;
+
+  cursor:pointer;
+  transition:.3s;
+}
+
+.sample-tab:hover{
+  border-color:rgba(255,255,255,.4);
+  color:#F5F5F7;
+}
+
+.sample-tab.is-active{
+  background:#F5F5F7;
+  border-color:#F5F5F7;
+  color:#0B0B0B;
+}
+
+.sample-tab-num{
+  font-size:12px;
+  letter-spacing:.15em;
+  opacity:.6;
+}
+
+.sample-tab-type{
+  margin-left:auto;
+  padding:4px 12px;
+
+  border:1px solid currentColor;
+  border-radius:999px;
+
+  font-size:11px;
+  letter-spacing:.1em;
+  opacity:.7;
+}
+
+/* ツールバー（PC/SP切り替え・別タブ） */
+.sample-toolbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:16px;
+}
+
+.device-switch{
+  display:inline-flex;
+  padding:4px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:999px;
+}
+
+.device-btn{
+  min-width:64px;
+  height:36px;
+
+  background:none;
+  border:none;
+  border-radius:999px;
+
+  color:#86868B;
+  font-family:inherit;
+  font-size:12px;
+  letter-spacing:.15em;
+
+  cursor:pointer;
+  transition:.3s;
+}
+
+.device-btn.is-active{
+  background:#F5F5F7;
+  color:#0B0B0B;
+}
+
+.sample-open{
+  color:#86868B;
+  font-size:13px;
+  letter-spacing:.08em;
+  transition:.3s;
+}
+
+.sample-open:hover{
+  color:#F5F5F7;
+}
+
+/* ブラウザ風の枠 */
+.browser-frame{
+  width:100%;
+  margin:0 auto;
+
+  overflow:hidden;
+  border-radius:20px;
+
+  background:#1C1C1E;
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 30px 80px rgba(0,0,0,.45);
+
+  transition:max-width .6s cubic-bezier(0.22,1,0.36,1);
+}
+
+.browser-bar{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  height:44px;
+  padding:0 18px;
+}
+
+.browser-dot{
+  width:11px;
+  height:11px;
+  border-radius:50%;
+  background:#3A3A3C;
+}
+
+.browser-url{
+  flex:1;
+  max-width:360px;
+  margin:0 auto;
+  padding:5px 16px;
+
+  border-radius:8px;
+  background:#2C2C2E;
+
+  color:#86868B;
+  font-size:12px;
+  text-align:center;
+
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+
+/* iframe本体：この中をスクロールしてサイト全体を閲覧 */
+.browser-screen{
+  height:min(75vh,720px);
+  background:#fff;
+}
+
+.browser-screen iframe{
+  display:block;
+  width:100%;
+  height:100%;
+  border:none;
+}
+
+/* SP表示（スマホ幅） */
+.sample-panel.is-sp .browser-frame{
+  max-width:390px;
+  border-radius:36px;
+}
+
+.sample-panel.is-sp .browser-screen{
+  height:min(75vh,760px);
+}
+
+.scroll-hint{
+  margin-top:16px;
+  color:#86868B;
+  font-size:13px;
+  text-align:center;
+}
+
+/* 説明 */
+.sample-detail{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:32px;
+  margin-top:48px;
+}
+
+.sample-detail dt{
+  margin-bottom:10px;
+  color:#86868B;
+  font-size:11px;
+  letter-spacing:.25em;
+}
+
+.sample-detail dd{
+  margin:0;
+  color:#D2D2D7;
+  font-size:15px;
+  line-height:1.9;
+}
+
+.sample-note{
+  margin-top:40px;
+  color:#6E6E73;
+  font-size:12px;
+}
