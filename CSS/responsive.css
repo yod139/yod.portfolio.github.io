@@ -96,3 +96,42 @@
 }
 
 }
+/* =========================
+   PROJECT 03 SP
+========================= */
+
+@media (max-width:768px){
+
+    .sample-tabs{
+        grid-template-columns:1fr;
+        gap:12px;
+    }
+
+    .sample-tab{
+        padding:18px 20px;
+        font-size:16px;
+    }
+
+    /* スマホでは画面幅そのままで表示するため、PC/SP切り替えは非表示 */
+    .device-switch{
+        display:none;
+    }
+
+    .sample-toolbar{
+        justify-content:flex-end;
+    }
+
+    .browser-frame{
+        border-radius:16px;
+    }
+
+    .browser-screen{
+        height:70vh;
+    }
+
+    .sample-detail{
+        grid-template-columns:1fr;
+        gap:24px;
+    }
+
+}
